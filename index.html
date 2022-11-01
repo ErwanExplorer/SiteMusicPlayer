@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Page</title>
+</head>
+<body>
+    <div class="ArrierePlan">
+        <div class="navbar">
+            <img src="media/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Playlist</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Profil</a></li>
+                <li><a href="#">A Propos</a></li>
+        </div>
+        <div class="contenus">
+            <div class="col-gauche">
+                <h1>Ma<br> Playlist<br> Matinale</h1>
+            </div>
+            <div class="col-droite">
+                <p>Jouer La Musique</p>
+                <img src="media/play.png" id="btnplay">
+            </div>
+        </div>
+        <audio id="music">
+                <source src="media/Music.mp3" type="audio/mp3">
+        </audio>
+<script>
+    var btnplay = document.getElementById("btnplay");
+    var music = document.getElementById("music");
+    btnplay.addEventListener("click", function(){
+        if(music.paused){
+            music.play();
+            btnplay.src = "media/pause.png";
+        }else{
+            music.pause();
+            btnplay.src = "media/play.png";
+        }
+    })
+</script>
+
+
+
+    </div>
+
+</body>
+</html>
